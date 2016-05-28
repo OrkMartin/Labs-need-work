@@ -1,7 +1,17 @@
-text=input()
-len(text)
-for i in range(0,len(text)-1):
- if abs(int(len(text))%int(i))==0:
-  k=i
+print('Введите строку:')
+s = input()
+n = len(s)
+i = 2
+k = 0
 
-print(k)
+while i < n:
+ if n % i == 0:
+  if n / i == s.count(s[:i]):
+   if s.count(s[:i]) > k:
+    k = s.count(s[:i])
+    t = i
+ i += 1
+print('k=', k, '\n t=', s[:t] )
+
+
+input()
